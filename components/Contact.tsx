@@ -69,7 +69,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden border-b border-stone-800 bg-gradient-to-b from-stone-900 to-stone-950 px-4 py-16 sm:px-6 sm:py-24"
+      className="relative overflow-hidden border-b border-stone-800 bg-gradient-to-b from-stone-900 to-stone-950 px-4 py-14 sm:px-6 sm:py-24"
     >
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_100%,rgba(13,148,136,0.06),transparent_55%)]"
@@ -120,12 +120,12 @@ export function Contact() {
             <li>
               <a
                 href={`tel:${site.phoneTel}`}
-                className="flex items-center gap-4 rounded-xl border border-stone-200 bg-white p-5 shadow-lg transition hover:border-teal-300 hover:shadow-xl"
+                className="flex min-h-[3.25rem] touch-manipulation items-center gap-4 rounded-xl border border-stone-200 bg-white p-4 shadow-lg transition hover:border-teal-300 hover:shadow-xl sm:p-5"
               >
-                <span className={iconWrapClass()}>
+                <span className={`${iconWrapClass()} shrink-0`}>
                   <IconPhone className="h-5 w-5" />
                 </span>
-                <div>
+                <div className="min-w-0 flex-1">
                   <p className="text-[0.6875rem] font-semibold uppercase tracking-wider text-teal-800">
                     Telefoon
                   </p>
@@ -136,16 +136,16 @@ export function Contact() {
             <li>
               <a
                 href={`mailto:${site.email}`}
-                className="flex items-center gap-4 rounded-xl border border-stone-200 bg-white p-5 shadow-lg transition hover:border-teal-300 hover:shadow-xl"
+                className="flex min-h-[3.25rem] touch-manipulation items-center gap-4 rounded-xl border border-stone-200 bg-white p-4 shadow-lg transition hover:border-teal-300 hover:shadow-xl sm:p-5"
               >
-                <span className={iconWrapClass()}>
+                <span className={`${iconWrapClass()} shrink-0`}>
                   <IconMail className="h-5 w-5" />
                 </span>
-                <div>
+                <div className="min-w-0 flex-1">
                   <p className="text-[0.6875rem] font-semibold uppercase tracking-wider text-teal-800">
                     E-mail
                   </p>
-                  <p className="font-semibold text-stone-900">{site.email}</p>
+                  <p className="break-words font-semibold text-stone-900">{site.email}</p>
                 </div>
               </a>
             </li>
@@ -154,12 +154,12 @@ export function Contact() {
                 href={site.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 rounded-xl border border-stone-200 bg-white p-5 shadow-lg transition hover:border-teal-300 hover:shadow-xl"
+                className="flex min-h-[3.25rem] touch-manipulation items-center gap-4 rounded-xl border border-stone-200 bg-white p-4 shadow-lg transition hover:border-teal-300 hover:shadow-xl sm:p-5"
               >
-                <span className={iconWrapClass()}>
+                <span className={`${iconWrapClass()} shrink-0`}>
                   <IconInstagram className="h-5 w-5" />
                 </span>
-                <div>
+                <div className="min-w-0 flex-1">
                   <p className="text-[0.6875rem] font-semibold uppercase tracking-wider text-teal-800">
                     Instagram
                   </p>
@@ -180,7 +180,7 @@ export function Contact() {
               href={site.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-[#25D366] px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-[#20bd5a]"
+              className="mt-8 inline-flex min-h-12 w-full touch-manipulation items-center justify-center gap-2 rounded-lg bg-[#25D366] px-6 py-3.5 text-sm font-semibold text-white shadow-lg transition hover:bg-[#20bd5a] sm:w-auto sm:py-3"
             >
               <IconWhatsApp className="h-5 w-5" />
               Chat op WhatsApp

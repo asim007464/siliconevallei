@@ -35,11 +35,11 @@ export function Reviews() {
   return (
     <section
       id="reviews"
-      className="border-b border-stone-200 bg-stone-100 px-4 py-16 sm:px-6 sm:py-24"
+      className="border-b border-stone-200 bg-stone-100 px-4 py-14 sm:px-6 sm:py-24"
     >
       <div className="mx-auto max-w-6xl">
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-2xl">
+        <div className="flex flex-col gap-6 sm:gap-8 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-2xl min-w-0">
             <SectionHeading
               tone="light"
               eyebrow="Reviews"

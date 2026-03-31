@@ -6,7 +6,7 @@ export function Services() {
   return (
     <section
       id="diensten"
-      className="border-b border-stone-800 bg-gradient-to-b from-stone-900 to-stone-950 px-4 py-16 sm:px-6 sm:py-24"
+      className="border-b border-stone-800 bg-gradient-to-b from-stone-900 to-stone-950 px-4 py-14 sm:px-6 sm:py-24"
     >
       <div className="mx-auto max-w-6xl">
         <SectionHeading
@@ -18,7 +18,7 @@ export function Services() {
           {services.map((s, i) => (
             <li key={s.title}>
               <RevealItem index={i} stagger={70}>
-                <div className="flex h-full flex-col rounded-xl border border-stone-700/80 border-l-4 border-l-teal-600 bg-stone-800/30 p-6 transition duration-300 hover:-translate-y-0.5 hover:border-stone-600 hover:bg-stone-800/50">
+                <div className="flex h-full min-w-0 flex-col rounded-xl border border-stone-700/80 border-l-4 border-l-teal-600 bg-stone-800/30 p-5 transition duration-300 hover:-translate-y-0.5 hover:border-stone-600 hover:bg-stone-800/50 sm:p-6">
                   <span className="font-mono text-xs text-teal-500/90">
                     {String(i + 1).padStart(2, "0")}
                   </span>

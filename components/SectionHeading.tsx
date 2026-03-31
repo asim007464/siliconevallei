@@ -31,8 +31,8 @@ export function SectionHeading({ eyebrow, title, lead, tone = "dark" }: Props) {
       <h2
         className={
           isLight
-            ? "mt-5 max-w-2xl text-3xl font-semibold tracking-tight text-stone-900 sm:text-[2rem] sm:leading-tight"
-            : "mt-5 max-w-2xl text-3xl font-semibold tracking-tight text-stone-50 sm:text-[2rem] sm:leading-tight"
+            ? "mt-5 max-w-2xl text-[clamp(1.5rem,5vw,2rem)] font-semibold tracking-tight text-stone-900 sm:leading-tight md:text-[2rem]"
+            : "mt-5 max-w-2xl text-[clamp(1.5rem,5vw,2rem)] font-semibold tracking-tight text-stone-50 sm:leading-tight md:text-[2rem]"
         }
       >
         {title}
@@ -41,8 +41,8 @@ export function SectionHeading({ eyebrow, title, lead, tone = "dark" }: Props) {
         <p
           className={
             isLight
-              ? "mt-4 max-w-3xl text-lg leading-relaxed text-stone-600"
-              : "mt-4 max-w-3xl text-lg leading-relaxed text-stone-300"
+              ? "mt-4 max-w-3xl text-base leading-relaxed text-stone-600 sm:text-lg"
+              : "mt-4 max-w-3xl text-base leading-relaxed text-stone-300 sm:text-lg"
           }
         >
           {lead}

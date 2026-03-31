@@ -25,6 +25,12 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,7 +41,7 @@ export default function RootLayout({
       lang="nl"
       className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-stone-950 text-stone-50 antialiased">
+      <body className="flex min-h-full min-w-0 flex-col bg-stone-950 text-stone-50 antialiased">
         <ScrollHashHandler />
         {children}
       </body>
