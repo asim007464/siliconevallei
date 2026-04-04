@@ -1,6 +1,7 @@
 import type { SVGProps } from "react";
 import Link from "next/link";
 import { SectionHeading } from "@/components/SectionHeading";
+import { ContactForm } from "@/components/ContactForm";
 import { contactExtra } from "@/lib/content";
 import { site } from "@/lib/site";
 
@@ -69,7 +70,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden border-b border-stone-800 bg-gradient-to-b from-stone-900 to-stone-950 px-4 py-14 sm:px-6 sm:py-24"
+      className="relative overflow-hidden border-b border-stone-800 bg-linear-to-b from-stone-900 to-stone-950 px-4 py-14 sm:px-6 sm:py-24"
     >
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_100%,rgba(13,148,136,0.06),transparent_55%)]"
@@ -79,112 +80,105 @@ export function Contact() {
         <SectionHeading
           eyebrow="Contact"
           title="Boek een afspraak of vraag een offerte"
-          lead="Stuur een korte omschrijving van uw klus, eventueel met foto's van de situatie — ik reageer zo snel mogelijk met een voorstel of vervolgvraag."
+          lead="Vul het formulier in of neem direct contact op via onderstaande kanalen."
         />
 
-        <div className="mt-12 grid gap-5 lg:grid-cols-3">
-          <div className="rounded-xl border border-stone-200 bg-white p-6 shadow-xl shadow-stone-950/20">
-            <div className={iconWrapClass()}>
-              <IconClock className="h-5 w-5" />
-            </div>
-            <h3 className="mt-4 text-base font-semibold text-stone-900">
-              {contactExtra.hoursTitle}
+        <div className="mt-12 grid gap-8 lg:grid-cols-5">
+          {/* Contact form */}
+          <div className="rounded-xl border border-stone-200 bg-white p-6 shadow-xl shadow-stone-950/20 sm:p-8 lg:col-span-3">
+            <h3 className="mb-6 text-lg font-semibold text-stone-900">
+              Offerte aanvraag
             </h3>
-            <ul className="mt-3 space-y-2 text-sm text-stone-600">
-              {contactExtra.hoursLines.map((line) => (
-                <li key={line}>{line}</li>
-              ))}
-            </ul>
+            <ContactForm />
           </div>
-          <div className="rounded-xl border border-stone-200 bg-white p-6 shadow-xl shadow-stone-950/20 lg:col-span-2">
-            <h3 className="text-base font-semibold text-stone-900">Beoordeling</h3>
-            <p className="mt-2 text-sm text-stone-600">{contactExtra.ratingLine}</p>
-            <div className="mt-4 flex flex-wrap gap-1.5">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <svg
-                  key={i}
-                  className="h-7 w-7 text-amber-500"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  aria-hidden
-                >
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))}
-            </div>
-          </div>
-        </div>
 
-        <div className="mt-10 grid gap-5 lg:grid-cols-2">
-          <ul className="space-y-3">
-            <li>
-              <a
-                href={`tel:${site.phoneTel}`}
-                className="flex min-h-[3.25rem] touch-manipulation items-center gap-4 rounded-xl border border-stone-200 bg-white p-4 shadow-lg transition hover:border-teal-300 hover:shadow-xl sm:p-5"
-              >
-                <span className={`${iconWrapClass()} shrink-0`}>
-                  <IconPhone className="h-5 w-5" />
-                </span>
-                <div className="min-w-0 flex-1">
-                  <p className="text-[0.6875rem] font-semibold uppercase tracking-wider text-teal-800">
-                    Telefoon
-                  </p>
-                  <p className="font-semibold text-stone-900">{site.phoneDisplay}</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a
-                href={`mailto:${site.email}`}
-                className="flex min-h-[3.25rem] touch-manipulation items-center gap-4 rounded-xl border border-stone-200 bg-white p-4 shadow-lg transition hover:border-teal-300 hover:shadow-xl sm:p-5"
-              >
-                <span className={`${iconWrapClass()} shrink-0`}>
-                  <IconMail className="h-5 w-5" />
-                </span>
-                <div className="min-w-0 flex-1">
-                  <p className="text-[0.6875rem] font-semibold uppercase tracking-wider text-teal-800">
-                    E-mail
-                  </p>
-                  <p className="break-words font-semibold text-stone-900">{site.email}</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a
-                href={site.instagramUrl}
+          {/* Sidebar with contact info */}
+          <div className="flex flex-col gap-5 lg:col-span-2">
+            <div className="rounded-xl border border-stone-200 bg-white p-6 shadow-xl shadow-stone-950/20">
+              <div className={iconWrapClass()}>
+                <IconClock className="h-5 w-5" />
+              </div>
+              <h3 className="mt-4 text-base font-semibold text-stone-900">
+                {contactExtra.hoursTitle}
+              </h3>
+              <ul className="mt-3 space-y-2 text-sm text-stone-600">
+                {contactExtra.hoursLines.map((line) => (
+                  <li key={line}>{line}</li>
+                ))}
+              </ul>
+            </div>
+
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href={`tel:${site.phoneTel}`}
+                  className="flex min-h-13 touch-manipulation items-center gap-4 rounded-xl border border-stone-200 bg-white p-4 shadow-lg transition hover:border-teal-300 hover:shadow-xl"
+                >
+                  <span className={`${iconWrapClass()} shrink-0`}>
+                    <IconPhone className="h-5 w-5" />
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-[0.6875rem] font-semibold uppercase tracking-wider text-teal-800">
+                      Telefoon
+                    </p>
+                    <p className="font-semibold text-stone-900">{site.phoneDisplay}</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${site.email}`}
+                  className="flex min-h-13 touch-manipulation items-center gap-4 rounded-xl border border-stone-200 bg-white p-4 shadow-lg transition hover:border-teal-300 hover:shadow-xl"
+                >
+                  <span className={`${iconWrapClass()} shrink-0`}>
+                    <IconMail className="h-5 w-5" />
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-[0.6875rem] font-semibold uppercase tracking-wider text-teal-800">
+                      E-mail
+                    </p>
+                    <p className="wrap-break-word font-semibold text-stone-900">{site.email}</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={site.instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex min-h-13 touch-manipulation items-center gap-4 rounded-xl border border-stone-200 bg-white p-4 shadow-lg transition hover:border-teal-300 hover:shadow-xl"
+                >
+                  <span className={`${iconWrapClass()} shrink-0`}>
+                    <IconInstagram className="h-5 w-5" />
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-[0.6875rem] font-semibold uppercase tracking-wider text-teal-800">
+                      Instagram
+                    </p>
+                    <p className="font-semibold text-stone-900">{site.instagramHandle}</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+
+            <div className="flex flex-1 flex-col justify-between rounded-xl border border-stone-700 bg-stone-800/80 p-7 ring-1 ring-stone-600/50">
+              <div>
+                <h3 className="text-lg font-semibold text-stone-50">Direct WhatsApp</h3>
+                <p className="mt-2 text-sm leading-relaxed text-stone-400">
+                  Stuur foto&apos;s van de situatie voor een vrijblijvende indicatie of
+                  plan direct een korte belafspraak.
+                </p>
+              </div>
+              <Link
+                href={site.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex min-h-[3.25rem] touch-manipulation items-center gap-4 rounded-xl border border-stone-200 bg-white p-4 shadow-lg transition hover:border-teal-300 hover:shadow-xl sm:p-5"
+                className="mt-8 inline-flex min-h-12 w-full touch-manipulation items-center justify-center gap-2 rounded-lg bg-[#25D366] px-6 py-3.5 text-sm font-semibold text-white shadow-lg transition hover:bg-[#20bd5a] sm:w-auto sm:py-3"
               >
-                <span className={`${iconWrapClass()} shrink-0`}>
-                  <IconInstagram className="h-5 w-5" />
-                </span>
-                <div className="min-w-0 flex-1">
-                  <p className="text-[0.6875rem] font-semibold uppercase tracking-wider text-teal-800">
-                    Instagram
-                  </p>
-                  <p className="font-semibold text-stone-900">{site.instagramHandle}</p>
-                </div>
-              </a>
-            </li>
-          </ul>
-          <div className="flex flex-col justify-between rounded-xl border border-stone-700 bg-stone-800/80 p-7 ring-1 ring-stone-600/50">
-            <div>
-              <h3 className="text-lg font-semibold text-stone-50">Direct WhatsApp</h3>
-              <p className="mt-2 text-sm leading-relaxed text-stone-400">
-                Stuur foto&apos;s van de situatie voor een vrijblijvende indicatie of
-                plan direct een korte belafspraak.
-              </p>
+                <IconWhatsApp className="h-5 w-5" />
+                Chat op WhatsApp
+              </Link>
             </div>
-            <Link
-              href={site.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 inline-flex min-h-12 w-full touch-manipulation items-center justify-center gap-2 rounded-lg bg-[#25D366] px-6 py-3.5 text-sm font-semibold text-white shadow-lg transition hover:bg-[#20bd5a] sm:w-auto sm:py-3"
-            >
-              <IconWhatsApp className="h-5 w-5" />
-              Chat op WhatsApp
-            </Link>
           </div>
         </div>
       </div>
