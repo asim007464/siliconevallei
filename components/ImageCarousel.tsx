@@ -31,7 +31,7 @@ export function ImageCarousel({
 
   if (total === 1) {
     return (
-      <div className="relative aspect-4/3 overflow-hidden bg-stone-200">
+      <div className="relative aspect-square overflow-hidden bg-stone-100">
         <Image
           src={images[0]}
           alt={alt}
@@ -49,7 +49,7 @@ export function ImageCarousel({
       <div ref={emblaRef} className="overflow-hidden">
         <div className="flex">
           {images.map((src, i) => (
-            <div key={src} className="relative aspect-4/3 min-w-0 flex-[0_0_100%]">
+            <div key={src} className="relative aspect-square min-w-0 flex-[0_0_100%] bg-stone-100">
               <Image
                 src={src}
                 alt={`${alt} ${i + 1}`}

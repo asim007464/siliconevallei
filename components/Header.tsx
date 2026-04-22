@@ -31,11 +31,11 @@ export function Header() {
         <a
           href="#home"
           onClick={() => setMenuOpen(false)}
-          className="min-w-0 shrink touch-manipulation py-2 font-bold uppercase tracking-[0.12em] text-stone-50 transition hover:text-teal-400 sm:tracking-[0.14em]"
+          className="min-w-0 shrink touch-manipulation py-2 text-[clamp(1.1rem,4.5vw,1.6rem)] transition hover:opacity-80 sm:text-2xl md:text-[1.75rem]"
         >
-          <span className="block text-[clamp(1rem,4.5vw,1.5rem)] leading-tight sm:text-2xl md:text-3xl">
-            {site.name}
-          </span>
+          <span className="font-bold text-stone-50">Silicone</span>
+          <span className="mx-1.5 text-teal-500">/</span>
+          <span className="font-light text-stone-50">Vallei</span>
         </a>
         <nav className="hidden items-center gap-0.5 md:flex" aria-label="Hoofdmenu">
           {nav.map((item) => (

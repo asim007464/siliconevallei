@@ -49,11 +49,6 @@ export function Work() {
                     <h3 className="text-lg font-semibold text-stone-900">
                       {item.title}
                     </h3>
-                    {item.photoNote ? (
-                      <p className="mt-1.5 text-xs font-medium text-teal-800">
-                        {item.photoNote}
-                      </p>
-                    ) : null}
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-stone-600">
                       {item.text}
                     </p>

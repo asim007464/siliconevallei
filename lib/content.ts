@@ -11,7 +11,7 @@ export const hero = {
     },
     {
       label: "Tevreden klanten",
-      value: "48+",
+      value: "100+",
       suffix: "projecten",
       hint: "",
     },
@@ -37,8 +37,8 @@ export const about = {
   ],
   stats: [
     { value: "5.0", label: "Sterren" },
-    { value: "48+", label: "Klussen" },
-    { value: "7 dagen", label: "Per week bereikbaar" },
+    { value: "100+", label: "Klussen" },
+    { value: "10+", label: "Jaar ervaring" },
   ],
 } as const;
 
@@ -74,69 +74,71 @@ export type PortfolioItem = {
   category: string;
   text: string;
   images: string[];
-  /** Korte toelichting: welke ruimte de foto’s tonen (badkamer vs wc). */
-  photoNote?: string;
 };
 
 export const portfolio: PortfolioItem[] = [
   {
     title: "Roompot vakantiepark Bloemendaal",
     category: "Project",
-    text: "Siliconevernieuwing in badkamers en toiletten in 113 vakantiehuisjes — een grootschalig project van bijna een jaar, uitgevoerd met dezelfde precisie en planning als bij kleinere klussen.",
-    images: ["/portfolio/roompot-bloemendaal.png", "/portfolio/werk-14.jpg"],
+    text: "Siliconevernieuwing in badkamers en toiletten in 113 vakantiehuisjes — een grootschalig project van bijna een jaar.",
+    images: [
+      "/portfolio/roompot-bloemendaal.png",
+      "/portfolio/werk-14.jpg",
+      "/portfolio/roompot3.jpg",
+      "/portfolio/roompot4.jpeg",
+      "/portfolio/roompot.jpeg",
+    ],
   },
   {
-    title: "Badkamer — douche, bad & wastafel",
+    title: "Badkamer afwerking",
     category: "Badkamer",
-    photoNote:
-      "Alleen badkamers (douche, bad, wastafel) — geen aparte wc-ruimte.",
-    text: "Strakke kitnaden rond bad, douche, wastafel en tegels — waterdicht en schimmelbestendig. Deze reeks toont uitsluitend badkamers.",
+    text: "Strakke kitnaden rond bad, douche, wastafel en tegels — waterdicht en schimmelbestendig.",
     images: [
       "/portfolio/badkamer-1.jpg",
       "/portfolio/badkamer-2.jpg",
       "/portfolio/badkamer-3.jpg",
+      "/portfolio/werk-03.jpg",
+      "/portfolio/werk-09.jpg",
     ],
   },
   {
     title: "WC / apart toilet",
     category: "WC",
-    photoNote:
-      "Alleen aparte wc-/toiletruimtes — niet dezelfde foto’s als bij ‘Badkamer’.",
-    text: "Kitwerk rond toiletpot, kleine ruimte en tegels in aparte wc’s — hygiënisch en strak. Deze twee foto’s horen niet bij de badkamer-galerij hierboven.",
-    images: ["/portfolio/toilet-1.jpg", "/portfolio/toilet-2.jpg", "/portfolio/werk-12.jpg"],
+    text: "Kitwerk rond toiletpot, tegels en leidingen in aparte wc-ruimtes — hygiënisch en strak.",
+    images: [
+      "/portfolio/toilet-1.jpg",
+      "/portfolio/toilet-2.jpg",
+      "/portfolio/werk-12.jpg",
+      "/portfolio/werk-04.jpg",
+    ],
   },
   {
     title: "Douche kit vernieuwd",
     category: "Douche",
     text: "Vernieuwde kitvoegen in de douche: waterdicht, schoon en als nieuw.",
-    images: ["/portfolio/douche-1.jpg"],
+    images: [
+      "/portfolio/douche-1.jpg",
+      "/portfolio/werk-05.jpg",
+      "/portfolio/werk-06.jpg",
+    ],
   },
   {
-    title: "Nis afwerking",
+    title: "Nis & detail afwerking",
     category: "Detail",
-    text: "Precisie bij nissen en hoeken — strakke kitlijnen waar het verschil zichtbaar is.",
-    images: ["/portfolio/niche-1.jpg"],
+    text: "Precisie bij nissen, hoeken en randen — strakke kitlijnen waar het verschil zichtbaar is.",
+    images: [
+      "/portfolio/niche-1.jpg",
+      "/portfolio/werk-02.jpg",
+      "/portfolio/werk-07.jpg",
+      "/portfolio/werk-08.jpg",
+    ],
   },
   {
     title: "Overige werkzaamheden",
     category: "Overig",
     text: "Diverse kitwerkzaamheden op maat — van kleine reparaties tot complete afwerking.",
-    images: ["/portfolio/overig-1.jpg"],
-  },
-  {
-    title: "Recente projecten",
-    category: "Projecten",
-    text: "Mix van verschillende ruimtes en klussen. Voor alleen badkamer- of alleen wc-foto’s zie de blokken ‘Badkamer’ en ‘WC’ hierboven.",
     images: [
-      "/portfolio/werk-01.jpg",
-      "/portfolio/werk-02.jpg",
-      "/portfolio/werk-03.jpg",
-      "/portfolio/werk-04.jpg",
-      "/portfolio/werk-05.jpg",
-      "/portfolio/werk-06.jpg",
-      "/portfolio/werk-07.jpg",
-      "/portfolio/werk-08.jpg",
-      "/portfolio/werk-09.jpg",
+      "/portfolio/overig-1.jpg",
       "/portfolio/werk-10.jpg",
       "/portfolio/werk-11.jpg",
       "/portfolio/werk-13.jpg",
