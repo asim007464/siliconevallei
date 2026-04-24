@@ -113,15 +113,15 @@ export function Reviews() {
             {/* Summary badge */}
             <div className="flex shrink-0 items-center gap-3 rounded-xl border border-stone-700/60 bg-stone-900/80 px-5 py-4 ring-1 ring-stone-700/40">
               <GoogleIcon className="h-7 w-7 shrink-0" />
-              <div>
+              <div className="flex min-w-0 flex-col gap-1">
                 <div className="flex items-baseline gap-1.5">
-                  <span className="text-2xl font-bold tabular-nums text-stone-50">
+                  <span className="text-3xl font-bold tabular-nums leading-none text-stone-50">
                     {reviewSummary.rating}
                   </span>
                   <span className="text-xs text-stone-500">/ 5</span>
                 </div>
                 <Stars size="sm" />
-                <p className="mt-1 text-xs text-stone-500">
+                <p className="text-xs leading-tight text-stone-500">
                   {reviewSummary.countLabel}
                 </p>
               </div>

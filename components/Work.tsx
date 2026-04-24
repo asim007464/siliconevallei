@@ -15,7 +15,7 @@ export function Work() {
         <SectionHeading
           tone="light"
           eyebrow="Werk"
-          title="Recente projecten"
+          title="Referentieprojecten"
           lead={
             <>
               Eigen projectfoto&apos;s en actueel werk. Meer foto&apos;s staan

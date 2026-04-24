@@ -11,8 +11,8 @@ export const hero = {
     },
     {
       label: "Tevreden klanten",
-      value: "100+",
-      suffix: "projecten",
+      value: "1000+",
+      suffix: "klanten",
       hint: "",
     },
     { label: "Bereikbaarheid", value: "7/7", suffix: "op afspraak", hint: "" },
@@ -82,17 +82,21 @@ export const portfolio: PortfolioItem[] = [
     category: "Project",
     text: "Siliconevernieuwing in badkamers en toiletten in 113 vakantiehuisjes — een grootschalig project van bijna een jaar.",
     images: [
-      "/portfolio/roompot-bloemendaal.png",
+      "/portfolio/roompot-logo.png",
       "/portfolio/werk-14.jpg",
+      "/portfolio/roompot-bloemendaal.png",
       "/portfolio/roompot3.jpg",
+      "/portfolio/oliver-green-amstelveen.png",
       "/portfolio/roompot4.jpeg",
+      "/portfolio/roompot-bloemendaal.jpg",
+      "/portfolio/roompot6.jpeg",
       "/portfolio/roompot.jpeg",
     ],
   },
   {
-    title: "Badkamer afwerking",
-    category: "Badkamer",
-    text: "Strakke kitnaden rond bad, douche, wastafel en tegels — waterdicht en schimmelbestendig.",
+    title: "Binnen- en nisafwerking",
+    category: "Overig",
+    text: "Strakke kitnaden rond aansluitvlakken, muren en details — strak afgewerkt en in lijn met uw tegels of natuursteen.",
     images: [
       "/portfolio/badkamer-1.jpg",
       "/portfolio/badkamer-2.jpg",
@@ -102,9 +106,9 @@ export const portfolio: PortfolioItem[] = [
     ],
   },
   {
-    title: "WC / apart toilet",
-    category: "WC",
-    text: "Kitwerk rond toiletpot, tegels en leidingen in aparte wc-ruimtes — hygiënisch en strak.",
+    title: "Trappen, plinten en aansluitingen",
+    category: "Overig",
+    text: "Strakke kitnaden waar vloer, trap, muur of plinten op elkaar aansluiten — schoon afgewerkt en in lijn met het interieur.",
     images: [
       "/portfolio/toilet-1.jpg",
       "/portfolio/toilet-2.jpg",
@@ -134,9 +138,9 @@ export const portfolio: PortfolioItem[] = [
     ],
   },
   {
-    title: "Overige werkzaamheden",
-    category: "Overig",
-    text: "Diverse kitwerkzaamheden op maat — van kleine reparaties tot complete afwerking.",
+    title: "Badkamer- en doucheruimte",
+    category: "Badkamer",
+    text: "Strakke, waterdichte kitnaden in badkamer en douche — rond ombouw, nissen en aansluiting met tegels, hygiënisch en strak afgewerkt.",
     images: [
       "/portfolio/overig-1.jpg",
       "/portfolio/werk-10.jpg",
@@ -196,4 +200,5 @@ export const workTypes = [
   "Plinten",
   "Toilet",
   "Ramen",
+  "Overig",
 ] as const;

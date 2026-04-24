@@ -13,7 +13,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+function getMetadataBase(): URL {
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return new URL(process.env.NEXT_PUBLIC_SITE_URL);
+  }
+  if (process.env.VERCEL_URL) {
+    return new URL(`https://${process.env.VERCEL_URL}`);
+  }
+  return new URL("http://localhost:3000");
+}
+
 export const metadata: Metadata = {
+  metadataBase: getMetadataBase(),
   title: "Silicone Vallei | Kitspecialist — Keuken, plinten, sanitair",
   description:
     "Professionele kit- en voegwerkzaamheden door Cagri. Keuken, plinten en sanitair. Contact via WhatsApp, telefoon of e-mail.",
@@ -22,6 +33,12 @@ export const metadata: Metadata = {
     description:
       "Professionele kit- en voegwerkzaamheden. Neem contact op via WhatsApp of e-mail.",
     locale: "nl_NL",
+    siteName: "Silicone Vallei",
+    type: "website",
+    url: getMetadataBase().origin,
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 

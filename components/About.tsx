@@ -53,7 +53,7 @@ const highlights = [
   {
     icon: IconClock,
     title: "Flexibel & snel",
-    text: "WhatsApp-reactie binnen uren. Avond of weekend? In overleg mogelijk.",
+    text: "WhatsApp-reactie binnen enkele uren. Avond of weekend? In overleg mogelijk.",
   },
   {
     icon: IconShield,

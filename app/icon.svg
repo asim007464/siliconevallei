@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Silicone Vallei">
+  <rect width="32" height="32" rx="7" fill="#0c0a09" />
+  <text
+    x="16"
+    y="20.5"
+    text-anchor="middle"
+    font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif"
+  >
+    <tspan font-size="11" font-weight="800" fill="#fafaf9">S</tspan>
+    <tspan font-size="9" font-weight="600" fill="#14b8a6"> / </tspan>
+    <tspan font-size="11" font-weight="300" fill="#fafaf9">V</tspan>
+  </text>
+</svg>

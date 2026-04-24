@@ -38,22 +38,14 @@ export function Hero() {
           {hero.lead}
         </p>
         <div
-          className="hero-animate mt-8 flex w-full max-w-md flex-col gap-3 sm:mt-10 sm:max-w-none sm:flex-row sm:flex-wrap"
+          className="hero-animate mt-8 flex w-full max-w-md flex-col gap-3 sm:mt-10"
           style={{ animationDelay: "300ms" }}
         >
           <Link
-            href={site.whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex min-h-12 touch-manipulation items-center justify-center rounded-lg bg-[#25D366] px-6 py-3.5 text-center text-sm font-semibold text-white shadow-lg shadow-emerald-950/40 transition duration-300 hover:bg-[#20bd5a] hover:brightness-105 active:scale-[0.98] sm:min-h-0 sm:w-auto sm:py-3"
+            href="/#contact"
+            className="inline-flex min-h-12 w-full touch-manipulation items-center justify-center rounded-lg border border-stone-600 bg-stone-800/60 px-6 py-3.5 text-center text-sm font-medium text-stone-100 transition duration-300 hover:border-teal-600/50 hover:bg-stone-800 active:scale-[0.98] sm:min-h-0 sm:w-auto sm:py-3"
           >
-            Vraag een offerte aan
-          </Link>
-          <Link
-            href={`mailto:${site.email}?subject=Offerte%20aanvraag`}
-            className="inline-flex min-h-12 touch-manipulation items-center justify-center rounded-lg border border-stone-600 bg-stone-800/60 px-6 py-3.5 text-center text-sm font-medium text-stone-100 transition duration-300 hover:border-teal-600/50 hover:bg-stone-800 active:scale-[0.98] sm:min-h-0 sm:w-auto sm:py-3"
-          >
-            Stuur een e-mail
+            Naar het contactformulier
           </Link>
         </div>
         <dl className="mt-12 grid gap-3 sm:mt-16 sm:grid-cols-3 sm:gap-4">
