@@ -92,9 +92,9 @@ export const portfolio: PortfolioItem[] = [
       "/portfolio/roompot4.jpeg",
       "/portfolio/oliver-green-amstelveen.png",
       "/portfolio/roompot3.jpg",
+      "/portfolio/roompot.jpeg",
       "/portfolio/roompot-bloemendaal.jpg",
       "/portfolio/roompot6.jpeg",
-      "/portfolio/roompot.jpeg",
     ],
   },
   {
@@ -110,14 +110,15 @@ export const portfolio: PortfolioItem[] = [
     ],
   },
   {
-    title: "Trappen, plinten en aansluitingen",
-    category: "Overig",
-    text: "Strakke kitnaden waar vloer, trap, muur of plinten op elkaar aansluiten — schoon afgewerkt en in lijn met het interieur.",
+    title: "Badkamer- en doucheruimte",
+    category: "Badkamer",
+    text: "Strakke, waterdichte kitnaden in badkamer en douche — rond ombouw, nissen en aansluiting met tegels, hygiënisch en strak afgewerkt.",
     images: [
       "/portfolio/toilet-1.jpg",
       "/portfolio/toilet-2.jpg",
       "/portfolio/werk-12.jpg",
       "/portfolio/werk-13.jpg",
+      "/portfolio/roompot-bloemendaal.jpg",
     ],
   },
   {
@@ -143,9 +144,9 @@ export const portfolio: PortfolioItem[] = [
     ],
   },
   {
-    title: "Badkamer- en doucheruimte",
-    category: "Badkamer",
-    text: "Strakke, waterdichte kitnaden in badkamer en douche — rond ombouw, nissen en aansluiting met tegels, hygiënisch en strak afgewerkt.",
+    title: "Trappen, plinten en aansluitingen",
+    category: "Overig",
+    text: "Strakke kitnaden waar vloer, trap, muur of plinten op elkaar aansluiten — schoon afgewerkt en in lijn met het interieur.",
     images: [
       "/portfolio/overig-1.jpg",
       "/portfolio/werk-11.jpg",
