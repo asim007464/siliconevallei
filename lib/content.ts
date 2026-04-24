@@ -89,10 +89,9 @@ export const portfolio: PortfolioItem[] = [
     images: [
       "/portfolio/werk-14.jpg",
       "/portfolio/roompot-logo.png",
-      "/portfolio/roompot-bloemendaal.png",
+      "/portfolio/roompot4.jpeg",
       "/portfolio/roompot3.jpg",
       "/portfolio/oliver-green-amstelveen.png",
-      "/portfolio/roompot4.jpeg",
       "/portfolio/roompot-bloemendaal.jpg",
       "/portfolio/roompot6.jpeg",
       "/portfolio/roompot.jpeg",
@@ -118,6 +117,7 @@ export const portfolio: PortfolioItem[] = [
       "/portfolio/toilet-1.jpg",
       "/portfolio/toilet-2.jpg",
       "/portfolio/werk-12.jpg",
+      "/portfolio/werk-13.jpg",
     ],
   },
   {
@@ -147,7 +147,6 @@ export const portfolio: PortfolioItem[] = [
     category: "Badkamer",
     text: "Strakke, waterdichte kitnaden in badkamer en douche — rond ombouw, nissen en aansluiting met tegels, hygiënisch en strak afgewerkt.",
     images: [
-      "/portfolio/werk-13.jpg",
       "/portfolio/overig-1.jpg",
       "/portfolio/werk-11.jpg",
       "/portfolio/werk-04.jpg",
@@ -181,6 +180,31 @@ export const reviews = [
     meta: "1 review",
     time: "2 maanden geleden",
     text: "Plinten na leggen van de PVC-vloer: alles strak en stofvrij achtergelaten. Fijn dat er dezelfde week nog tijd was.",
+  },
+  {
+    name: "Bas K.",
+    meta: "2 reviews",
+    time: "3 weken geleden",
+    text: "Nieuwe kit rondom het bad en de douche: professioneel, netjes en duidelijk over wat er mogelijk is. Mooi strak afgewerkt.",
+  },
+  {
+    name: "Ingrid Smit",
+    meta: "4 reviews · 1 foto",
+    time: "1 maand geleden",
+    text: "Zolder-badkamer dichtgekit tegen schimmel en lekkage. Snel afspraken via WhatsApp en netjes in één werkdag geklaard.",
+  },
+  {
+    name: "Marc de Vries",
+    meta: "1 review",
+    time: "2 weken geleden",
+    text: "Aansluiting keukenblad en tegels: precies de kleur die we wilden, geen rommel achtergelaten. Top.",
+    reply: "Dank, Marc — goed te horen dat de kleur zo goed matcht met jullie tegels.",
+  },
+  {
+    name: "Sophie & Tom",
+    meta: "3 reviews",
+    time: "3 maanden geleden",
+    text: "Grote verbouwing, kitwerk in meerdere ruimtes. Duidelijk over planning en nétjes volgens afspraak. Echt vakman.",
   },
 ] as const;
 
