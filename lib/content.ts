@@ -76,14 +76,19 @@ export type PortfolioItem = {
   images: string[];
 };
 
+export const workSection = {
+  eyebrow: "Werk",
+  title: "Referentieprojecten",
+} as const;
+
 export const portfolio: PortfolioItem[] = [
   {
-    title: "Roompot vakantiepark Bloemendaal",
+    title: "Referentieprojecten",
     category: "Project",
     text: "Siliconevernieuwing in badkamers en toiletten in 113 vakantiehuisjes — een grootschalig project van bijna een jaar.",
     images: [
-      "/portfolio/roompot-logo.png",
       "/portfolio/werk-14.jpg",
+      "/portfolio/roompot-logo.png",
       "/portfolio/roompot-bloemendaal.png",
       "/portfolio/roompot3.jpg",
       "/portfolio/oliver-green-amstelveen.png",
@@ -113,7 +118,6 @@ export const portfolio: PortfolioItem[] = [
       "/portfolio/toilet-1.jpg",
       "/portfolio/toilet-2.jpg",
       "/portfolio/werk-12.jpg",
-      "/portfolio/werk-04.jpg",
     ],
   },
   {
@@ -135,6 +139,7 @@ export const portfolio: PortfolioItem[] = [
       "/portfolio/werk-02.jpg",
       "/portfolio/werk-07.jpg",
       "/portfolio/werk-08.jpg",
+      "/portfolio/werk-10.jpg",
     ],
   },
   {
@@ -142,10 +147,10 @@ export const portfolio: PortfolioItem[] = [
     category: "Badkamer",
     text: "Strakke, waterdichte kitnaden in badkamer en douche — rond ombouw, nissen en aansluiting met tegels, hygiënisch en strak afgewerkt.",
     images: [
-      "/portfolio/overig-1.jpg",
-      "/portfolio/werk-10.jpg",
-      "/portfolio/werk-11.jpg",
       "/portfolio/werk-13.jpg",
+      "/portfolio/overig-1.jpg",
+      "/portfolio/werk-11.jpg",
+      "/portfolio/werk-04.jpg",
     ],
   },
 ];
