@@ -93,7 +93,6 @@ export const portfolio: PortfolioItem[] = [
       "/portfolio/oliver-green-amstelveen.png",
       "/portfolio/roompot3.jpg",
       "/portfolio/roompot.jpeg",
-      "/portfolio/roompot-bloemendaal.jpg",
       "/portfolio/roompot6.jpeg",
     ],
   },
@@ -166,7 +165,7 @@ export const reviews = [
   },
   {
     name: "Thomas J.",
-    meta: "Lokale gids · 12 reviews",
+    meta: "Lokale gids · 20 reviews",
     time: "1 maand geleden",
     text: "Tweede keer dat ik Silicone Vallei inschakel voor kitwerk na een verbouwing. Weer netjes werk, duidelijke communicatie via WhatsApp en nette prijsafspraak vooraf.",
   },
@@ -207,11 +206,83 @@ export const reviews = [
     time: "3 maanden geleden",
     text: "Grote verbouwing, kitwerk in meerdere ruimtes. Duidelijk over planning en nétjes volgens afspraak. Echt vakman.",
   },
+  {
+    name: "Jan Huisman",
+    meta: "2 reviews",
+    time: "2 maanden geleden",
+    text: "Plinten in de woonkamer: strak afgewerkt, precies in dezelfde kitkleur als de vloer. Geen naden zichtbaar.",
+  },
+  {
+    name: "Evelien Vos",
+    meta: "1 review",
+    time: "1 maand geleden",
+    text: "Klein toilet opnieuw ingekit na lekkage. Snelle reactie en heldere uitleg. Voelt weer helemaal strak.",
+  },
+  {
+    name: "Karin en Rob",
+    meta: "4 reviews",
+    time: "5 weken geleden",
+    text: "Renovatie badkamer: hele doucheruimte netjes, ook de hoeken en de douchedeur. Zou hem zo weer inschakelen.",
+  },
+  {
+    name: "Ahmed R.",
+    meta: "1 review",
+    time: "3 weken geleden",
+    text: "Afspraak binnen enkele dagen, werk goed afgesloten. Communicatie duidelijk via WhatsApp.",
+  },
+  {
+    name: "Chantal de Boer",
+    meta: "2 reviews",
+    time: "2 weken geleden",
+    text: "Nieuwe keuken: kit rond spoelbak en werkblad. Hygiënisch en mooi in lijn met het graniet.",
+  },
+  {
+    name: "Roberto G.",
+    meta: "1 review",
+    time: "4 maanden geleden",
+    text: "Douche en badmeubel: waterdicht en geen luchtborrels. Mooi afwerkingsniveau.",
+  },
+  {
+    name: "Nina Z.",
+    meta: "3 reviews · 1 foto",
+    time: "6 weken geleden",
+    text: "Hulp met RAL-kleur bij onze tegels. Monsters meegenomen, daarna perfecte kitkleur. Top.",
+  },
+  {
+    name: "Dennis Meijer",
+    meta: "1 review",
+    time: "2 maanden geleden",
+    text: "Huurwoning: kit bij vensterbank en doucherand opnieuw. Netjes achtergelaten, verhuurder tevreden.",
+  },
+  {
+    name: "Lotte A.",
+    meta: "2 reviews",
+    time: "1 week geleden",
+    text: "Offerte duidelijk, geen verrassingen. Keukenafwerking precies op tijd afgewerkt.",
+  },
+  {
+    name: "Frank Oosterom",
+    meta: "1 review",
+    time: "3 maanden geleden",
+    text: "Zeer tevreden. Alles op afspraak, strak uiterlijk en vakmanschap. Vijf sterren verdiend.",
+  },
+  {
+    name: "Yara P.",
+    meta: "1 review",
+    time: "3 weken geleden",
+    text: "Ook in het weekend bereid om te reageren. Afspraak in de avond, prima gelopen.",
+  },
+  {
+    name: "Henk Smit",
+    meta: "2 reviews",
+    time: "4 weken geleden",
+    text: "Tweede klus: nu de hal en toilet. Hetzelfde hoge kwaliteit als vorige keer. Aanrader.",
+  },
 ] as const;
 
 export const reviewSummary = {
   rating: "5.0",
-  countLabel: "12 reviews",
+  countLabel: "20 reviews",
 } as const;
 
 export const contactExtra = {

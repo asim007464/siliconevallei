@@ -16,14 +16,20 @@ export function Services() {
         />
         <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
-            <li key={s.title}>
-              <RevealItem index={i} stagger={70}>
-                <div className="flex h-full min-w-0 flex-col rounded-xl border border-stone-700/80 border-l-4 border-l-teal-600 bg-stone-800/30 p-5 transition duration-300 hover:-translate-y-0.5 hover:border-stone-600 hover:bg-stone-800/50 sm:p-6">
-                  <span className="font-mono text-xs text-teal-500/90">
+            <li key={s.title} className="h-full min-h-0">
+              <RevealItem
+                index={i}
+                stagger={70}
+                className="h-full min-h-0 w-full"
+              >
+                <div className="flex h-full min-h-0 w-full min-w-0 flex-col rounded-xl border border-stone-700/80 border-l-4 border-l-teal-600 bg-stone-800/30 p-5 transition duration-300 hover:-translate-y-0.5 hover:border-stone-600 hover:bg-stone-800/50 sm:p-6">
+                  <span className="shrink-0 font-mono text-xs text-teal-500/90">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="mt-3 text-lg font-semibold text-stone-50">{s.title}</h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-stone-400">
+                  <h3 className="mt-3 shrink-0 text-lg font-semibold text-stone-50">
+                    {s.title}
+                  </h3>
+                  <p className="mt-3 min-h-0 flex-1 text-sm leading-relaxed text-stone-400">
                     {s.text}
                   </p>
                 </div>
