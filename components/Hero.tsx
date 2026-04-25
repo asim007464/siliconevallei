@@ -13,40 +13,42 @@ export function Hero() {
         aria-hidden
       />
       <div className="relative mx-auto max-w-6xl">
-        <p
-          className="hero-animate text-[0.8125rem] font-semibold uppercase tracking-[0.2em] text-teal-400"
-          style={{ animationDelay: "0ms" }}
-        >
-          {site.tagline}
-        </p>
-        <p
-          className="hero-animate mt-4 text-sm text-stone-400"
-          style={{ animationDelay: "70ms" }}
-        >
-          {hero.eyebrow}
-        </p>
-        <h1
-          className="hero-animate mt-5 max-w-3xl text-[clamp(1.75rem,6vw,3rem)] font-semibold leading-[1.15] tracking-tight text-stone-50 sm:leading-[1.1] md:text-5xl"
-          style={{ animationDelay: "140ms" }}
-        >
-          {hero.title}
-        </h1>
-        <p
-          className="hero-animate mt-5 max-w-2xl text-base leading-relaxed text-stone-300 sm:mt-6 sm:text-lg"
-          style={{ animationDelay: "220ms" }}
-        >
-          {hero.lead}
-        </p>
-        <div
-          className="hero-animate mt-8 flex w-full max-w-md flex-col gap-3 sm:mt-10"
-          style={{ animationDelay: "300ms" }}
-        >
-          <Link
-            href="/#contact"
-            className="inline-flex min-h-12 w-full touch-manipulation items-center justify-center rounded-lg border border-stone-600 bg-stone-800/60 px-6 py-3.5 text-center text-sm font-medium text-stone-100 transition duration-300 hover:border-teal-600/50 hover:bg-stone-800 active:scale-[0.98] sm:min-h-0 sm:w-auto sm:py-3"
+        <div className="md:text-center">
+          <p
+            className="hero-animate text-[0.8125rem] font-semibold uppercase tracking-[0.2em] text-teal-400"
+            style={{ animationDelay: "0ms" }}
           >
-            Naar het contactformulier
-          </Link>
+            {site.tagline}
+          </p>
+          <p
+            className="hero-animate mt-4 text-sm text-stone-400"
+            style={{ animationDelay: "70ms" }}
+          >
+            {hero.eyebrow}
+          </p>
+          <h1
+            className="hero-animate mt-5 max-w-3xl text-[clamp(1.75rem,6vw,3rem)] font-semibold leading-[1.15] tracking-tight text-stone-50 sm:leading-[1.1] md:mx-auto md:text-5xl"
+            style={{ animationDelay: "140ms" }}
+          >
+            {hero.title}
+          </h1>
+          <p
+            className="hero-animate mt-5 max-w-2xl text-base leading-relaxed text-stone-300 sm:mt-6 sm:text-lg md:mx-auto"
+            style={{ animationDelay: "220ms" }}
+          >
+            {hero.lead}
+          </p>
+          <div
+            className="hero-animate mt-8 flex w-full max-w-md flex-col gap-3 sm:mt-10 md:mx-auto md:items-center"
+            style={{ animationDelay: "300ms" }}
+          >
+            <Link
+              href="/#contact"
+              className="inline-flex min-h-12 w-full touch-manipulation items-center justify-center rounded-lg border border-stone-600 bg-stone-800/60 px-6 py-3.5 text-center text-sm font-medium text-stone-100 transition duration-300 hover:border-teal-600/50 hover:bg-stone-800 active:scale-[0.98] sm:min-h-0 sm:w-auto sm:py-3"
+            >
+              Naar het contactformulier
+            </Link>
+          </div>
         </div>
         <dl className="mt-12 grid gap-3 sm:mt-16 sm:grid-cols-3 sm:gap-4">
           {hero.stats.map((s, i) => (

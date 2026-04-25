@@ -4,9 +4,9 @@ export const hero = {
   lead: "Van keuken en badkamer tot plinten en tegelwerk: precisie, nette lijnen en kleur die past bij uw interieur. Snel bereikbaar via WhatsApp — ook in de avond en het weekend.",
   stats: [
     {
-      label: "Gemiddelde beoordeling",
-      value: "5.0",
-      suffix: "sterren",
+      label: "Jaren ervaring",
+      value: "10",
+      suffix: "jaar",
       hint: "",
     },
     {
