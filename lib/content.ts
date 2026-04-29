@@ -75,12 +75,13 @@ export type PortfolioItem = {
 
 export const workSection = {
   eyebrow: "Werk",
-  title: "Our projects",
+  title: "Onze projecten",
+  lead: "Een selectie van ons recente werk.",
 } as const;
 
 export const portfolio: PortfolioItem[] = [
   {
-    title: "Our projects",
+    title: "Roompot vakantieparken",
     category: "Project",
     text: "Siliconevernieuwing in badkamers en toiletten in 113 vakantiehuisjes — een grootschalig project van bijna een jaar.",
     images: [
@@ -94,7 +95,7 @@ export const portfolio: PortfolioItem[] = [
     ],
   },
   {
-    title: "Bathroom and shower area",
+    title: "Badkamer en doucheruimte",
     category: "Badkamer",
     text: "Strakke kitnaden rond aansluitvlakken, muren en details — strak afgewerkt en in lijn met uw tegels of natuursteen.",
     images: [
@@ -105,7 +106,7 @@ export const portfolio: PortfolioItem[] = [
     ],
   },
   {
-    title: "Toilet area",
+    title: "Toiletruimte",
     category: "Toilet",
     text: "Strakke, waterdichte kitnaden in badkamer en douche — rond ombouw, nissen en aansluiting met tegels, hygiënisch en strak afgewerkt.",
     images: [
@@ -118,7 +119,7 @@ export const portfolio: PortfolioItem[] = [
     imageFit: ["contain", "cover", "cover", "cover", "cover"],
   },
   {
-    title: "Kit renewals",
+    title: "Douchekit vernieuwd",
     category: "Douche",
     text: "Vernieuwde kitvoegen in de douche: waterdicht, schoon en als nieuw.",
     images: [
@@ -140,7 +141,7 @@ export const portfolio: PortfolioItem[] = [
     ],
   },
   {
-    title: "Others",
+    title: "Overig",
     category: "Overig",
     text: "Strakke kitnaden waar vloer, trap, muur of plinten op elkaar aansluiten — schoon afgewerkt en in lijn met het interieur.",
     images: [
@@ -155,7 +156,7 @@ export const portfolio: PortfolioItem[] = [
 export const reviews = [
   {
     name: "Marieke van den Berg",
-    meta: "3 reviews",
+    meta: "3 beoordelingen",
     time: "2 weken geleden",
     text: "We hebben de keuken laten vernieuwen en Cagri heeft de afwerking rond het werkblad en de kraan gedaan. Super strak, hij dacht mee over de kleur en was op tijd. Zeker een aanrader.",
     reply:
@@ -163,37 +164,37 @@ export const reviews = [
   },
   {
     name: "Thomas J.",
-    meta: "Lokale gids · 20 reviews",
+    meta: "Lokale gids · 20 beoordelingen",
     time: "1 maand geleden",
     text: "Tweede keer dat ik Silicone Vallei inschakel voor kitwerk na een verbouwing. Weer netjes werk, duidelijke communicatie via WhatsApp en nette prijsafspraak vooraf.",
   },
   {
     name: "Fatima El Idrissi",
-    meta: "5 reviews · 2 foto's",
+    meta: "5 beoordelingen · 2 foto's",
     time: "1 maand geleden",
     text: "Badkamer volledig opnieuw ingekit. Geen luchtbellen, mooie lijnen in de hoeken. Ook geholpen met het kiezen van de juiste kit voor vochtige ruimte.",
   },
   {
     name: "Peter & Linda",
-    meta: "1 review",
+    meta: "1 beoordeling",
     time: "2 maanden geleden",
     text: "Plinten na leggen van de PVC-vloer: alles strak en stofvrij achtergelaten. Fijn dat er dezelfde week nog tijd was.",
   },
   {
     name: "Bas K.",
-    meta: "2 reviews",
+    meta: "2 beoordelingen",
     time: "3 weken geleden",
     text: "Nieuwe kit rondom het bad en de douche: professioneel, netjes en duidelijk over wat er mogelijk is. Mooi strak afgewerkt.",
   },
   {
     name: "Ingrid Smit",
-    meta: "4 reviews · 1 foto",
+    meta: "4 beoordelingen · 1 foto",
     time: "1 maand geleden",
     text: "Zolder-badkamer dichtgekit tegen schimmel en lekkage. Snel afspraken via WhatsApp en netjes in één werkdag geklaard.",
   },
   {
     name: "Marc de Vries",
-    meta: "1 review",
+    meta: "1 beoordeling",
     time: "2 weken geleden",
     text: "Aansluiting keukenblad en tegels: precies de kleur die we wilden, geen rommel achtergelaten. Top.",
     reply:
@@ -201,79 +202,79 @@ export const reviews = [
   },
   {
     name: "Sophie & Tom",
-    meta: "3 reviews",
+    meta: "3 beoordelingen",
     time: "3 maanden geleden",
     text: "Grote verbouwing, kitwerk in meerdere ruimtes. Duidelijk over planning en nétjes volgens afspraak. Echt vakman.",
   },
   {
     name: "Jan Huisman",
-    meta: "2 reviews",
+    meta: "2 beoordelingen",
     time: "2 maanden geleden",
     text: "Plinten in de woonkamer: strak afgewerkt, precies in dezelfde kitkleur als de vloer. Geen naden zichtbaar.",
   },
   {
     name: "Evelien Vos",
-    meta: "1 review",
+    meta: "1 beoordeling",
     time: "1 maand geleden",
     text: "Klein toilet opnieuw ingekit na lekkage. Snelle reactie en heldere uitleg. Voelt weer helemaal strak.",
   },
   {
     name: "Karin en Rob",
-    meta: "4 reviews",
+    meta: "4 beoordelingen",
     time: "5 weken geleden",
     text: "Renovatie badkamer: hele doucheruimte netjes, ook de hoeken en de douchedeur. Zou hem zo weer inschakelen.",
   },
   {
     name: "Ahmed R.",
-    meta: "1 review",
+    meta: "1 beoordeling",
     time: "3 weken geleden",
     text: "Afspraak binnen enkele dagen, werk goed afgesloten. Communicatie duidelijk via WhatsApp.",
   },
   {
     name: "Chantal de Boer",
-    meta: "2 reviews",
+    meta: "2 beoordelingen",
     time: "2 weken geleden",
     text: "Nieuwe keuken: kit rond spoelbak en werkblad. Hygiënisch en mooi in lijn met het graniet.",
   },
   {
     name: "Roberto G.",
-    meta: "1 review",
+    meta: "1 beoordeling",
     time: "4 maanden geleden",
     text: "Douche en badmeubel: waterdicht en geen luchtborrels. Mooi afwerkingsniveau.",
   },
   {
     name: "Nina Z.",
-    meta: "3 reviews · 1 foto",
+    meta: "3 beoordelingen · 1 foto",
     time: "6 weken geleden",
     text: "Hulp met RAL-kleur bij onze tegels. Monsters meegenomen, daarna perfecte kitkleur. Top.",
   },
   {
     name: "Dennis Meijer",
-    meta: "1 review",
+    meta: "1 beoordeling",
     time: "2 maanden geleden",
     text: "Huurwoning: kit bij vensterbank en doucherand opnieuw. Netjes achtergelaten, verhuurder tevreden.",
   },
   {
     name: "Lotte A.",
-    meta: "2 reviews",
+    meta: "2 beoordelingen",
     time: "1 week geleden",
     text: "Offerte duidelijk, geen verrassingen. Keukenafwerking precies op tijd afgewerkt.",
   },
   {
     name: "Frank Oosterom",
-    meta: "1 review",
+    meta: "1 beoordeling",
     time: "3 maanden geleden",
     text: "Zeer tevreden. Alles op afspraak, strak uiterlijk en vakmanschap. Vijf sterren verdiend.",
   },
   {
     name: "Yara P.",
-    meta: "1 review",
+    meta: "1 beoordeling",
     time: "3 weken geleden",
     text: "Ook in het weekend bereid om te reageren. Afspraak in de avond, prima gelopen.",
   },
   {
     name: "Henk Smit",
-    meta: "2 reviews",
+    meta: "2 beoordelingen",
     time: "4 weken geleden",
     text: "Tweede klus: nu de hal en toilet. Hetzelfde hoge kwaliteit als vorige keer. Aanrader.",
   },
@@ -281,7 +282,7 @@ export const reviews = [
 
 export const reviewSummary = {
   rating: "5.0",
-  countLabel: "20 reviews",
+  countLabel: "20 beoordelingen",
 } as const;
 
 export const contactExtra = {

@@ -5,11 +5,11 @@ import { useEffect, useState } from "react";
 import { site } from "@/lib/site";
 
 const nav = [
-  { href: "#home", label: "Home" },
+  { href: "#home", label: "Start" },
   { href: "#over", label: "Over" },
   { href: "#diensten", label: "Diensten" },
   { href: "#werk", label: "Werk" },
-  { href: "#reviews", label: "Reviews" },
+  { href: "#reviews", label: "Beoordelingen" },
   { href: "#contact", label: "Contact" },
 ];
 

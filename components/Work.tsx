@@ -14,7 +14,7 @@ export function Work() {
           tone="light"
           eyebrow={workSection.eyebrow}
           title={workSection.title}
-          lead="A selection of our recent work"
+          lead={workSection.lead}
         />
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {portfolio.map((item, i) => (
@@ -42,7 +42,7 @@ export function Work() {
                     </p>
                     {item.images.length > 1 && (
                       <p className="mt-auto pt-3 text-xs text-stone-400">
-                        {item.images.length} foto&apos;s — swipe of gebruik de pijltjes
+                        {item.images.length} foto&apos;s — veeg of gebruik de pijltjes
                       </p>
                     )}
                   </div>

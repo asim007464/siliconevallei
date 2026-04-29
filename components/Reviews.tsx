@@ -105,7 +105,7 @@ export function Reviews() {
         <RevealItem index={0} stagger={0}>
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <SectionHeading
-              eyebrow="Reviews"
+              eyebrow="Beoordelingen"
               title="Wat klanten zeggen"
               lead="Beoordelingen van klanten over onze kitwerkzaamheden."
             />
@@ -184,7 +184,7 @@ export function Reviews() {
             type="button"
             onClick={() => emblaApi?.scrollPrev()}
             className="absolute -left-2 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-stone-700 bg-stone-900/90 text-stone-300 shadow-lg backdrop-blur-sm transition hover:border-teal-700 hover:text-teal-300 lg:flex"
-            aria-label="Vorige review"
+            aria-label="Vorige beoordeling"
           >
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -194,7 +194,7 @@ export function Reviews() {
             type="button"
             onClick={() => emblaApi?.scrollNext()}
             className="absolute -right-2 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-stone-700 bg-stone-900/90 text-stone-300 shadow-lg backdrop-blur-sm transition hover:border-teal-700 hover:text-teal-300 lg:flex"
-            aria-label="Volgende review"
+            aria-label="Volgende beoordeling"
           >
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -214,7 +214,7 @@ export function Reviews() {
                   ? "w-6 bg-teal-500"
                   : "w-2 bg-stone-700 hover:bg-stone-600"
               }`}
-              aria-label={`Review ${i + 1}`}
+            aria-label={`Beoordeling ${i + 1}`}
             />
           ))}
         </div>
