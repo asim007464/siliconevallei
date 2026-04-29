@@ -7,9 +7,11 @@ import Image from "next/image";
 export function ImageCarousel({
   images,
   alt,
+  imageFit,
 }: {
   images: string[];
   alt: string;
+  imageFit?: ("cover" | "contain")[];
 }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selected, setSelected] = useState(0);
@@ -31,6 +33,9 @@ export function ImageCarousel({
     };
   }, [emblaApi, onSelect]);
 
+  const fitClass = (i: number) =>
+    imageFit?.[i] === "contain" ? "object-contain" : "object-cover";
+
   if (total === 1) {
     return (
       <div className="relative aspect-square overflow-hidden bg-stone-100">
@@ -39,7 +44,7 @@ export function ImageCarousel({
           alt={alt}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover"
+          className={fitClass(0)}
           quality={85}
         />
       </div>
@@ -57,7 +62,7 @@ export function ImageCarousel({
                 alt={`${alt} ${i + 1}`}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="object-cover"
+                className={fitClass(i)}
                 quality={85}
               />
             </div>

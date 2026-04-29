@@ -69,6 +69,8 @@ export type PortfolioItem = {
   category: string;
   text: string;
   images: string[];
+  /** Per slide: `contain` shows the full image (letterboxed); default is `cover`. */
+  imageFit?: ("cover" | "contain")[];
 };
 
 export const workSection = {
@@ -113,6 +115,7 @@ export const portfolio: PortfolioItem[] = [
       "/portfolio/werk-13.jpg",
       "/portfolio/roompot-bloemendaal.jpg",
     ],
+    imageFit: ["contain", "cover", "cover", "cover", "cover"],
   },
   {
     title: "Kit renewals",
@@ -193,7 +196,8 @@ export const reviews = [
     meta: "1 review",
     time: "2 weken geleden",
     text: "Aansluiting keukenblad en tegels: precies de kleur die we wilden, geen rommel achtergelaten. Top.",
-    reply: "Dank, Marc — goed te horen dat de kleur zo goed matcht met jullie tegels.",
+    reply:
+      "Dank, Marc — goed te horen dat de kleur zo goed matcht met jullie tegels.",
   },
   {
     name: "Sophie & Tom",

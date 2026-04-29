@@ -1,9 +1,7 @@
-import Link from "next/link";
 import { RevealItem } from "@/components/RevealItem";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ImageCarousel } from "@/components/ImageCarousel";
 import { portfolio, workSection } from "@/lib/content";
-import { site } from "@/lib/site";
 
 export function Work() {
   return (
@@ -16,21 +14,7 @@ export function Work() {
           tone="light"
           eyebrow={workSection.eyebrow}
           title={workSection.title}
-          lead={
-            <>
-              Eigen projectfoto&apos;s en actueel werk. Meer foto&apos;s staan
-              op{" "}
-              <Link
-                href={site.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-teal-700 underline decoration-teal-400/50 underline-offset-[3px] transition hover:text-teal-800"
-              >
-                Instagram
-              </Link>
-              .
-            </>
-          }
+          lead="A selection of our recent work"
         />
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {portfolio.map((item, i) => (
@@ -38,7 +22,11 @@ export function Work() {
               <RevealItem index={i} stagger={80} className="h-full min-h-0 w-full">
                 <div className="group flex h-full w-full min-w-0 flex-col overflow-hidden rounded-xl border border-stone-200 bg-stone-50 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-teal-200 hover:shadow-md">
                   <div className="relative shrink-0">
-                    <ImageCarousel images={item.images} alt={item.title} />
+                    <ImageCarousel
+                      images={item.images}
+                      alt={item.title}
+                      imageFit={item.imageFit}
+                    />
                     <div className="pointer-events-none absolute left-3 top-3 z-20">
                       <span className="rounded-lg border border-white/80 bg-white/95 px-3 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-wide text-teal-800 shadow-sm backdrop-blur-sm">
                         {item.category}
