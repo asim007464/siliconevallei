@@ -23,9 +23,11 @@ export function ImageCarousel({
   useEffect(() => {
     if (!emblaApi) return;
     emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
     onSelect();
     return () => {
       emblaApi.off("select", onSelect);
+      emblaApi.off("reInit", onSelect);
     };
   }, [emblaApi, onSelect]);
 
@@ -100,8 +102,12 @@ export function ImageCarousel({
         ))}
       </div>
 
-      <div className="absolute right-2 top-2 z-10 rounded-md bg-black/50 px-2 py-0.5 text-xs font-medium text-white backdrop-blur-sm">
-        {selected + 1}/{total}
+      <div
+        className="pointer-events-none absolute right-2 top-2 z-10 rounded-full bg-black/55 px-2.5 py-1 text-xs font-semibold tabular-nums text-white backdrop-blur-sm"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        {selected + 1} / {total}
       </div>
     </div>
   );

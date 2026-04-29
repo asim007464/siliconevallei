@@ -89,10 +89,10 @@ export const portfolio: PortfolioItem[] = [
     images: [
       "/portfolio/werk-14.jpg",
       "/portfolio/roompot-logo.png",
-      "/portfolio/roompot4.jpeg",
+      "/portfolio/roompot.jpeg",
       "/portfolio/oliver-green-amstelveen.png",
       "/portfolio/roompot3.jpg",
-      "/portfolio/roompot.jpeg",
+      "/portfolio/roompot4.jpeg",
       "/portfolio/roompot6.jpeg",
     ],
   },

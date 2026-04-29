@@ -9,6 +9,15 @@ export type ContactState = {
 
 const RECIPIENT = process.env.CONTACT_EMAIL ?? "asimsajjad928@gmail.com";
 
+const MAX_IMAGE_FILES = 5;
+const MAX_IMAGE_BYTES = 4 * 1024 * 1024; // 4 MB per file (SMTP-friendly)
+const ALLOWED_IMAGE_TYPES = new Set([
+  "image/jpeg",
+  "image/png",
+  "image/gif",
+  "image/webp",
+]);
+
 export async function submitContact(
   _prev: ContactState,
   formData: FormData,
@@ -22,6 +31,12 @@ export async function submitContact(
   const preferredDate = (formData.get("preferredDate") as string)?.trim() ?? "";
   const preferredTime = (formData.get("preferredTime") as string)?.trim() ?? "";
   const description = (formData.get("description") as string)?.trim() ?? "";
+
+  const attachmentResult = await buildImageAttachments(formData);
+  if (!attachmentResult.ok) {
+    return { success: false, message: attachmentResult.message };
+  }
+  const attachments = attachmentResult.attachments;
 
   const timingLabels: Record<string, string> = {
     asap: "Zo snel mogelijk",
@@ -42,6 +57,11 @@ export async function submitContact(
     return { success: false, message: "Voer een geldig e-mailadres in." };
   }
 
+  const bijlagenRow =
+    attachments.length > 0
+      ? `<tr><td style="padding:6px 12px;font-weight:bold;">Foto&apos;s</td><td style="padding:6px 12px;">${attachments.length} bijlage(n) (zie e-mailbijlagen)</td></tr>`
+      : "";
+
   const htmlBody = `
     <h2>Nieuw contactformulier — Silicone Vallei</h2>
     <table style="border-collapse:collapse;font-family:sans-serif;">
@@ -52,6 +72,7 @@ export async function submitContact(
       <tr><td style="padding:6px 12px;font-weight:bold;">Type werk</td><td style="padding:6px 12px;">${workTypes.length ? workTypes.map(esc).join(", ") : "—"}</td></tr>
       <tr><td style="padding:6px 12px;font-weight:bold;">Planning</td><td style="padding:6px 12px;">${esc(timingDisplay)}</td></tr>
       <tr><td style="padding:6px 12px;font-weight:bold;vertical-align:top;">Omschrijving</td><td style="padding:6px 12px;">${esc(description) || "—"}</td></tr>
+      ${bijlagenRow}
     </table>
   `;
 
@@ -65,7 +86,10 @@ export async function submitContact(
     `Type werk: ${workTypes.length ? workTypes.join(", ") : "—"}`,
     `Planning: ${timingDisplay}`,
     `Omschrijving: ${description || "—"}`,
-  ].join("\n");
+    attachments.length ? `Foto's: ${attachments.length} bijlage(n) toegevoegd aan deze e-mail.` : "",
+  ]
+    .filter(Boolean)
+    .join("\n");
 
   try {
     const smtpUser = process.env.SMTP_USER ?? "";
@@ -83,6 +107,7 @@ export async function submitContact(
       subject: `Offerte aanvraag — ${name || email}`,
       text: textBody,
       html: htmlBody,
+      attachments,
     });
 
     return {
@@ -104,4 +129,97 @@ function esc(s: string): string {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
+}
+
+type MailAttachment = {
+  filename: string;
+  content: Buffer;
+  contentType: string;
+};
+
+async function buildImageAttachments(formData: FormData): Promise<
+  | { ok: true; attachments: MailAttachment[] }
+  | { ok: false; message: string }
+> {
+  const entries = formData.getAll("photos");
+  const files: File[] = [];
+  for (const item of entries) {
+    if (item instanceof File && item.size > 0) {
+      files.push(item);
+    }
+  }
+
+  if (files.length === 0) {
+    return { ok: true, attachments: [] };
+  }
+
+  if (files.length > MAX_IMAGE_FILES) {
+    return {
+      ok: false,
+      message: `U kunt maximaal ${MAX_IMAGE_FILES} afbeeldingen tegelijk uploaden.`,
+    };
+  }
+
+  const attachments: MailAttachment[] = [];
+
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i];
+    const type = resolveImageMime(file);
+
+    if (!type || !ALLOWED_IMAGE_TYPES.has(type)) {
+      return {
+        ok: false,
+        message:
+          "Alleen afbeeldingen zijn toegestaan (JPG, PNG, GIF of WebP). Controleer uw bestanden.",
+      };
+    }
+
+    if (file.size > MAX_IMAGE_BYTES) {
+      return {
+        ok: false,
+        message: "Elke afbeelding mag maximaal 4 MB zijn.",
+      };
+    }
+
+    const buffer = Buffer.from(await file.arrayBuffer());
+    const filename = safeImageFilename(file.name, i, type);
+
+    attachments.push({
+      filename,
+      content: buffer,
+      contentType: type,
+    });
+  }
+
+  return { ok: true, attachments };
+}
+
+function resolveImageMime(file: File): string | null {
+  const raw = (file.type || "").trim().toLowerCase();
+  if (ALLOWED_IMAGE_TYPES.has(raw)) return raw;
+  const n = file.name.toLowerCase();
+  if (n.endsWith(".jpg") || n.endsWith(".jpeg")) return "image/jpeg";
+  if (n.endsWith(".png")) return "image/png";
+  if (n.endsWith(".gif")) return "image/gif";
+  if (n.endsWith(".webp")) return "image/webp";
+  return null;
+}
+
+function safeImageFilename(original: string, index: number, mime: string): string {
+  const ext =
+    mime === "image/png"
+      ? "png"
+      : mime === "image/gif"
+        ? "gif"
+        : mime === "image/webp"
+          ? "webp"
+          : "jpg";
+  const cleaned = original
+    .replace(/^.*[/\\]/, "")
+    .replace(/[^a-zA-Z0-9._-]/g, "_")
+    .slice(0, 80);
+  if (cleaned.length > 4 && /\.(jpe?g|png|gif|webp)$/i.test(cleaned)) {
+    return cleaned;
+  }
+  return `foto-${index + 1}.${ext}`;
 }

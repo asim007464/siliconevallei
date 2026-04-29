@@ -218,57 +218,6 @@ export function Reviews() {
             />
           ))}
         </div>
-
-        {/* Full list: all reviews (same data as slider) */}
-        <div className="mt-16 border-t border-stone-800/80 pt-12">
-          <h3 className="text-lg font-semibold text-stone-100 sm:text-xl">
-            Alle {reviews.length} beoordelingen
-          </h3>
-          <p className="mt-1 max-w-2xl text-sm text-stone-500">
-            Hieronder staan dezelfde beoordelingen als in de carrousel, in één overzicht.
-          </p>
-          <ul className="mt-8 grid list-none gap-4 p-0 sm:grid-cols-2 sm:gap-5">
-            {reviews.map((r, i) => (
-              <li
-                key={`all-${i}-${r.name}`}
-                className="flex flex-col rounded-2xl border border-stone-800/80 bg-stone-900/40 p-5 sm:p-6"
-              >
-                <div className="mb-2 flex items-start justify-between gap-2">
-                  <div className="flex min-w-0 items-center gap-3">
-                    <div
-                      className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-teal-900/40 text-xs font-bold text-teal-300 ring-1 ring-teal-800/50"
-                      aria-hidden
-                    >
-                      {initials(r.name)}
-                    </div>
-                    <div className="min-w-0">
-                      <p className="text-sm font-semibold text-stone-100">
-                        {r.name}
-                      </p>
-                      <p className="text-xs text-stone-500">
-                        {r.meta} · {r.time}
-                      </p>
-                    </div>
-                  </div>
-                  <Stars />
-                </div>
-                <p className="text-sm leading-relaxed text-stone-300">
-                  &ldquo;{r.text}&rdquo;
-                </p>
-                {"reply" in r && r.reply ? (
-                  <div className="mt-4 rounded-lg border border-teal-800/20 bg-teal-950/20 px-3 py-2.5">
-                    <p className="text-[0.625rem] font-semibold uppercase tracking-widest text-teal-500/90">
-                      Reactie van de eigenaar
-                    </p>
-                    <p className="mt-1 text-sm leading-relaxed text-stone-400">
-                      &ldquo;{r.reply}&rdquo;
-                    </p>
-                  </div>
-                ) : null}
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
     </section>
   );

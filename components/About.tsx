@@ -97,11 +97,11 @@ export function About() {
         </ul>
 
         {/* Stats row */}
-        <dl className="mt-12 grid gap-4 sm:grid-cols-3">
+        <dl className="mt-12 grid gap-6 sm:grid-cols-3 sm:gap-8">
           {about.stats.map((s) => (
             <div
               key={s.label}
-              className="rounded-xl border border-stone-200 bg-white px-5 py-5 text-center shadow-sm sm:text-left"
+              className="text-center sm:text-left"
             >
               <dt className="text-[0.6875rem] uppercase tracking-wider text-teal-800">
                 {s.label}

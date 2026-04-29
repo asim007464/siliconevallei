@@ -160,6 +160,23 @@ export function ContactForm() {
         />
       </div>
 
+      <div>
+        <label htmlFor="photos" className="block text-sm font-medium text-stone-700">
+          Foto&apos;s <span className="font-normal text-stone-500">(optioneel)</span>
+        </label>
+        <input
+          id="photos"
+          name="photos"
+          type="file"
+          accept="image/jpeg,image/png,image/gif,image/webp,.jpg,.jpeg,.png,.gif,.webp"
+          multiple
+          className="mt-1.5 block w-full cursor-pointer rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 file:mr-4 file:rounded-md file:border-0 file:bg-teal-50 file:px-3 file:py-1.5 file:text-sm file:font-medium file:text-teal-900 hover:file:bg-teal-100 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 focus:outline-none"
+        />
+        <p className="mt-1.5 text-xs text-stone-500">
+          Maximaal 5 afbeeldingen (JPG, PNG, GIF of WebP), elk max. 4 MB. Worden meegestuurd met uw aanvraag.
+        </p>
+      </div>
+
       {state.message && (
         <div
           className={`rounded-lg px-4 py-3 text-sm ${

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="slashGrad" x1="400" y1="168" x2="400" y2="232" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5EEAD4"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="36" ry="36" fill="#121212"/>
+  <text x="400" y="218" text-anchor="middle" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="52" letter-spacing="-0.02em">
+    <tspan fill="#FFFFFF" font-weight="700">Silicone</tspan>
+    <tspan fill="#FFFFFF" font-weight="700"> </tspan>
+    <tspan fill="url(#slashGrad)" font-weight="600" font-size="56">/</tspan>
+    <tspan fill="#FFFFFF" font-weight="400"> </tspan>
+    <tspan fill="#FFFFFF" font-weight="400">Vallei</tspan>
+  </text>
+  <text x="400" y="278" text-anchor="middle" fill="#888888" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, sans-serif" font-size="17" font-weight="400" letter-spacing="0.02em">18 — Slash Divider</text>
+</svg>
