@@ -95,23 +95,6 @@ export function About() {
             </li>
           ))}
         </ul>
-
-        {/* Stats row */}
-        <dl className="mt-12 grid gap-6 sm:grid-cols-3 sm:gap-8">
-          {about.stats.map((s) => (
-            <div
-              key={s.label}
-              className="text-center sm:text-left"
-            >
-              <dt className="text-[0.6875rem] uppercase tracking-wider text-teal-800">
-                {s.label}
-              </dt>
-              <dd className="mt-2 text-2xl font-semibold tabular-nums text-stone-900">
-                {s.value}
-              </dd>
-            </div>
-          ))}
-        </dl>
       </div>
     </section>
   );

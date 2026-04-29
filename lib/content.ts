@@ -35,11 +35,6 @@ export const about = {
     "Ervaren in woningen en kleine utiliteitsprojecten",
     "Werkplek netjes achterlaten na afloop",
   ],
-  stats: [
-    { value: "5.0", label: "Sterren" },
-    { value: "100+", label: "Klussen" },
-    { value: "10+", label: "Jaar ervaring" },
-  ],
 } as const;
 
 export const services = [
@@ -78,12 +73,12 @@ export type PortfolioItem = {
 
 export const workSection = {
   eyebrow: "Werk",
-  title: "Referentieprojecten",
+  title: "Our projects",
 } as const;
 
 export const portfolio: PortfolioItem[] = [
   {
-    title: "Referentieprojecten",
+    title: "Our projects",
     category: "Project",
     text: "Siliconevernieuwing in badkamers en toiletten in 113 vakantiehuisjes — een grootschalig project van bijna een jaar.",
     images: [
@@ -97,20 +92,19 @@ export const portfolio: PortfolioItem[] = [
     ],
   },
   {
-    title: "Binnen- en nisafwerking",
-    category: "Overig",
+    title: "Bathroom and shower area",
+    category: "Badkamer",
     text: "Strakke kitnaden rond aansluitvlakken, muren en details — strak afgewerkt en in lijn met uw tegels of natuursteen.",
     images: [
       "/portfolio/badkamer-1.jpg",
       "/portfolio/badkamer-2.jpg",
       "/portfolio/badkamer-3.jpg",
-      "/portfolio/werk-03.jpg",
       "/portfolio/werk-09.jpg",
     ],
   },
   {
-    title: "Badkamer- en doucheruimte",
-    category: "Badkamer",
+    title: "Toilet area",
+    category: "Toilet",
     text: "Strakke, waterdichte kitnaden in badkamer en douche — rond ombouw, nissen en aansluiting met tegels, hygiënisch en strak afgewerkt.",
     images: [
       "/portfolio/toilet-1.jpg",
@@ -121,7 +115,7 @@ export const portfolio: PortfolioItem[] = [
     ],
   },
   {
-    title: "Douche kit vernieuwd",
+    title: "Kit renewals",
     category: "Douche",
     text: "Vernieuwde kitvoegen in de douche: waterdicht, schoon en als nieuw.",
     images: [
@@ -143,13 +137,14 @@ export const portfolio: PortfolioItem[] = [
     ],
   },
   {
-    title: "Trappen, plinten en aansluitingen",
+    title: "Others",
     category: "Overig",
     text: "Strakke kitnaden waar vloer, trap, muur of plinten op elkaar aansluiten — schoon afgewerkt en in lijn met het interieur.",
     images: [
       "/portfolio/overig-1.jpg",
       "/portfolio/werk-11.jpg",
       "/portfolio/werk-04.jpg",
+      "/portfolio/werk-03.jpg",
     ],
   },
 ];
