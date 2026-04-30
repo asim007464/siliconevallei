@@ -1,7 +1,9 @@
+import Link from "next/link";
 import { RevealItem } from "@/components/RevealItem";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ImageCarousel } from "@/components/ImageCarousel";
 import { portfolio, workSection } from "@/lib/content";
+import { site } from "@/lib/site";
 
 export function Work() {
   return (
@@ -14,7 +16,20 @@ export function Work() {
           tone="light"
           eyebrow={workSection.eyebrow}
           title={workSection.title}
-          lead={workSection.lead}
+          lead={
+            <>
+              Meer foto&apos;s staan op{" "}
+              <Link
+                href={site.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-teal-700 underline decoration-teal-400/50 underline-offset-[3px] transition hover:text-teal-800"
+              >
+                Instagram
+              </Link>
+              . {workSection.lead}
+            </>
+          }
         />
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {portfolio.map((item, i) => (
