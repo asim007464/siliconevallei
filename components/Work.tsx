@@ -18,7 +18,7 @@ export function Work() {
           title={workSection.title}
           lead={
             <>
-              Meer foto&apos;s staan op{" "}
+              {workSection.lead} Meer foto&apos;s staan op{" "}
               <Link
                 href={site.instagramUrl}
                 target="_blank"
@@ -27,7 +27,7 @@ export function Work() {
               >
                 Instagram
               </Link>
-              . {workSection.lead}
+              .
             </>
           }
         />

@@ -76,19 +76,18 @@ export type PortfolioItem = {
 export const workSection = {
   eyebrow: "Werk",
   title: "Onze projecten",
-  lead: "Een selectie van ons recente werk.",
+  lead: "Een selectie van ons werk.",
 } as const;
 
 export const portfolio: PortfolioItem[] = [
   {
-    title: "Roompot vakantieparken",
+    title: "Grote commerciële kitprojecten",
     category: "Project",
-    text: "Siliconevernieuwing in badkamers en toiletten in 113 vakantiehuisjes — een grootschalig project van bijna een jaar.",
+    text: "Hoogwaardig kitwerk voor vakantieparken, restaurants en kledingwinkels, met focus op kwaliteit, duurzaamheid en een langdurig strak eindresultaat. Siliconevernieuwing in badkamers en toiletten in 113 vakantiehuisjes — een grootschalig project van bijna een jaar.",
     images: [
       "/portfolio/werk-14.jpg",
       "/portfolio/roompot-logo.png",
       "/portfolio/roompot.jpeg",
-      "/portfolio/oliver-green-amstelveen.png",
       "/portfolio/roompot3.jpg",
       "/portfolio/roompot4.jpeg",
       "/portfolio/roompot6.jpeg",
@@ -97,26 +96,25 @@ export const portfolio: PortfolioItem[] = [
   {
     title: "Badkamer en doucheruimte",
     category: "Badkamer",
-    text: "Strakke kitnaden rond aansluitvlakken, muren en details — strak afgewerkt en in lijn met uw tegels of natuursteen.",
+    text: "Kitwerk voor badkamer en douche: waterdichte naden rond douchebak, wandtegels, badrand en kraan. Bestand tegen vocht en schimmel, met een gladde afwerking in de kleur van uw tegelwerk.",
     images: [
       "/portfolio/badkamer-1.jpg",
       "/portfolio/badkamer-2.jpg",
       "/portfolio/badkamer-3.jpg",
       "/portfolio/werk-09.jpg",
+      "/portfolio/werk-13.jpg",
     ],
   },
   {
     title: "Toiletruimte",
     category: "Toilet",
-    text: "Strakke, waterdichte kitnaden in badkamer en douche — rond ombouw, nissen en aansluiting met tegels, hygiënisch en strak afgewerkt.",
+    text: "Kit rond het toilet: voetstuk, randen en aansluiting met vloer en wandtegels. Ideaal voor een apart toilet of kleine toiletruimte — strak, waterdicht en eenvoudig schoon te houden.",
     images: [
       "/portfolio/toilet-1.jpg",
       "/portfolio/toilet-2.jpg",
       "/portfolio/werk-12.jpg",
-      "/portfolio/werk-13.jpg",
-      "/portfolio/roompot-bloemendaal.jpg",
     ],
-    imageFit: ["contain", "cover", "cover", "cover", "cover"],
+    imageFit: ["contain", "cover", "cover"],
   },
   {
     title: "Douchekit vernieuwd",
@@ -149,6 +147,7 @@ export const portfolio: PortfolioItem[] = [
       "/portfolio/werk-11.jpg",
       "/portfolio/werk-04.jpg",
       "/portfolio/werk-03.jpg",
+      "/portfolio/roompot-bloemendaal.jpg",
     ],
   },
 ];
@@ -282,7 +281,7 @@ export const reviews = [
 
 export const reviewSummary = {
   rating: "5.0",
-  countLabel: "20 beoordelingen",
+  countLabel: "97 beoordelingen",
 } as const;
 
 export const contactExtra = {
